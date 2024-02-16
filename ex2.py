@@ -37,9 +37,6 @@ def partition(arr, low, high):
     arr[low], arr[right] = arr[right], arr[low]
     return right
 
-
-
-
 def generate_test_case_bub(size, case):
     if case == "best":
         return list(range(1, size + 1))
@@ -88,13 +85,13 @@ for size in test_sizes:
 
 plt.figure(figsize=(10, 6))
 
-plt.plot(test_sizes, qui_results["best"], label = "quick sort best")
-plt.plot(test_sizes, qui_results["worst"], label = "quick sort worst")
-plt.plot(test_sizes, qui_results["average"], label = "quick sort average")
+plt.plot(test_sizes, qui_results["best"], label="Quick Sort Best")
+plt.plot(test_sizes, qui_results["worst"], label="Quick Sort Worst")
+plt.plot(test_sizes, qui_results["average"], label="Quick Sort Average")
 
-plt.plot(test_sizes, bub_results["best"], label = "bubble sort best")
-plt.plot(test_sizes, bub_results["worst"], label = "bubble sort best")
-plt.plot(test_sizes, bub_results["average"], label = "bubble sort best")
+plt.plot(test_sizes, bub_results["best"], label="Bubble Sort Best")
+plt.plot(test_sizes, bub_results["worst"], label="Bubble Sort Worst")
+plt.plot(test_sizes, bub_results["average"], label="Bubble Sort Average")
 
 plt.title("Performance Comparison of Bubble Sort and Quick Sort")
 plt.xlabel('Input Size')
